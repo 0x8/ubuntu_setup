@@ -60,6 +60,7 @@ echo "done"
 ##Oh-My-Zsh Install
 echo ">>Installing Oh-My-Zsh..."
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+unsetopt no_match
 echo ">>If Shell does not start into zsh upon restart, run chsh -s zsh"
 echo "done"
 
