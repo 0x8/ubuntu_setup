@@ -1,6 +1,4 @@
-Hello all!
-
-I have setup this repo to house scripts to make changes to Ubuntu 16.04 based on my needs.
+I have set up this repo to house scripts to make changes to Ubuntu 16.04 based on my needs.
 Being that I am currently toying around with a lot of binary, some of the things I have made this script do are:
 
 Install radare2 from the github page,
