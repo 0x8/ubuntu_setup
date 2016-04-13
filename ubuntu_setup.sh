@@ -85,8 +85,8 @@ echo "done"
 echo ">>Installing powerline fonts"
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
-mkdir ~/.fonts;
-mv PowerlineSymbols.otf ~/.fonts/;
+mkdir ~/.fonts
+mv PowerlineSymbols.otf ~/.fonts/
 mkdir ~/.config/fontconfig
 mkdir ~/.config/fontconfig/conf.d/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
