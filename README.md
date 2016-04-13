@@ -1,6 +1,8 @@
 nullp0inter's ubuntu setup scripts
 ==================================
 
+
+
 About
 -----
 I have set up this repo to house scripts to make changes to Ubuntu 16.04 based on my needs.
@@ -16,6 +18,17 @@ Install some stuff needed to make zsh's agnoster theme work (in the future it wi
 You can simply read the scripts first if you don't trust them. I don't guarantee it works with every version of Ubuntu however, as I am only really trying it out at all on 16.04 LTS (64-bit beta, x86). Feel free to add other scripts to do stuff for the Ubuntu configuration.
 
 I will update this as I do more.
+
+Installation:
+-------------
+To run first do
+`chmod +x ubuntu_setup_part*`
+then run
+`./ubuntu_setup_part1.sh`
+and follow any prompts. Once it finishes (you should be in zsh at this point), run
+`./ubuntu_setup_part2.sh`
+
+TIP: Remember that tab completion is your friend in bash
 
 
 Current Known Issues:
