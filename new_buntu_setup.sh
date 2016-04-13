@@ -88,7 +88,7 @@ wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbol
 mkdir ~/.fonts;
 mv PowerlineSymbols.otf ~/.fonts/;
 mkdir ~/.config/fontconfig
-mkdir ~/.config/fontconfig/config.d/
+mkdir ~/.config/fontconfig/conf.d/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 fc-cache -fv ~/.fonts/
 echo ">>Font Installation done, for now you will need to manually change theme in .zshrc to agnoster"
