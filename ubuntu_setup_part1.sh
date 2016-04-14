@@ -30,6 +30,7 @@ echo "done"
 #####################
 ##Radare2 Install
 echo ">>Git Cloning radare2..."
+cd ~
 git clone https://github.com/radare/radare2.git
 echo "done"
 

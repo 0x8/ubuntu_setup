@@ -8,6 +8,8 @@
 unsetopt no_match
 echo ">>Changing theme to agnoster"
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' ~/.zshrc
+sed -i 's/$USER%m/$USER/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
+sed -i 's/%~/%c/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
 echo "done"
 
 ######################
