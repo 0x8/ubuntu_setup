@@ -22,17 +22,17 @@ I will update this as I do more.
 Installation:
 -------------
 Because you will pull this from here you must first install git
--`sudo apt-get install git`
+- `sudo apt-get install git`
 
 Clone the directory 
--`git clone https://github.com/0x8/ubuntu_setup.git`
+- `git clone https://github.com/0x8/ubuntu_setup.git`
 
 To run first do
--`chmod +x ubuntu_setup_part*`
+- `chmod +x ubuntu_setup_part*`
 then run
--`./ubuntu_setup_part1.sh`
+- `./ubuntu_setup_part1.sh`
 and follow any prompts. Once it finishes (you should be in zsh at this point), run
--`./ubuntu_setup_part2.sh`
+- `./ubuntu_setup_part2.sh`
 
 TIP: Remember that tab completion is your friend in bash
 
