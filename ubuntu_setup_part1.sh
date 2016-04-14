@@ -17,20 +17,23 @@ echo "done"
 #######################
 ##apt-get installations
 echo ">>Installing new software..."
-sudo apt-get install -fy open-vm-tools-* gcc-multilib g++-multilib thefuck wget curl zsh python python3 vim-runtime vim-gui-common
+sudo apt-get install -fy open-vm-tools-* gcc-multilib g++-multilib thefuck wget curl zsh python python3 vim-runtime vim-gui-common python2.7 python2.7-dev python-pip
 echo "done"
 
 ###################
 ##PIP installations
-echo ">>Grabbing pip..."
-wget https://bootstrap.pypa.io/get-pip.py
-echo "done"
-echo ">>Installing pip..."
-sudo python get-pip.py
-echo "done"
+#echo ">>Grabbing pip..."
+#wget https://bootstrap.pypa.io/get-pip.py
+#echo "done"
+#echo ">>Installing pip..."
+#sudo python get-pip.py
+#echo "done"
 
 echo ">>PIP>>Installing python requests..."
 sudo pip install requests
+echo "done"
+echo ">>PIP>>Installing pwntools..."
+sudo -H pip install pwntools
 echo "done"
 #echo ">>PIP>>Installing capstone..."
 #sudo pip install capstone
