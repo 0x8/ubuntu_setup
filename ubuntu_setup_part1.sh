@@ -9,15 +9,15 @@
 ##########################################
 ##update repositories and upgrade software
 echo ">>Update and Upgrade system..."
-sudo apt-get update;
-sudo apt-get upgrade -qfy;
-sudo apt-get dist-upgrade -qfy;
+sudo apt-get -qq update;
+sudo apt-get -qq upgrade -qfy;
+sudo apt-get -qq dist-upgrade -qfy;
 echo "done"
 
 #######################
 ##apt-get installations
 echo ">>Installing new software..."
-sudo apt-get install -fy open-vm-tools-* gcc-multilib g++-multilib thefuck wget curl zsh python python3 vim-runtime vim-gui-common python2.7 python2.7-dev python-pip
+sudo apt-get -qq install -fy open-vm-tools-* gcc-multilib g++-multilib thefuck wget curl zsh python python3 vim-runtime vim-gui-common python2.7 python2.7-dev python-pip quassel-client
 echo "done"
 
 ###################
@@ -58,6 +58,13 @@ echo ">>Installing peda..."
 git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
 echo "done"
+
+#########################################
+##Install Scud-Cloud, ubuntu slack client
+sudo apt-add-repository -y ppa:rael-gc/scudcloud
+echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+sudo apt-get update
+sudo apt-get install scudcloud
 
 ######################
 ##Oh-My-Zsh Install

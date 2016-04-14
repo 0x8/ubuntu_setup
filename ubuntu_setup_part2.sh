@@ -6,7 +6,8 @@
 ##########################
 ##Oh-My-Zsh configuration
 unsetopt no_match
-echo ">>If Shell does not start into zsh upon restart, run chsh -s zsh"
+echo ">>Changing theme to agnoster"
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' ~/.zshrc
 echo "done"
 
 ######################
@@ -38,7 +39,6 @@ mkdir ~/.config/fontconfig
 mkdir ~/.config/fontconfig/conf.d/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 fc-cache -fv ~/.fonts/
-echo ">>Font Installation done, for now you will need to manually change theme in .zshrc to agnoster"
 echo "done"
 
 ############################
