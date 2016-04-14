@@ -21,20 +21,24 @@ I will update this as I do more.
 
 Installation:
 -------------
-Because you will pull this from here you must first install git
-- `sudo apt-get install git`
+Because you have to grab this from the git repo, naturally you must first install git.After that it is smooth sailing. Below is the code you will need, and remember this all assumes a brand new, fresh install of 16.04 as that is what this was tested for.
 
-Clone the directory 
-- `git clone https://github.com/0x8/ubuntu_setup.git`
+```
+sudo apt-get install git
+git clone https://github.com/0x8/ubuntu_setup.git
+cd ubuntu_setup
+chmod +x ubuntu_setup_part*
+./ubuntu_setup_part1.sh
+./ubuntu_setup_part2.sh
+```
+...and that's it. You're done.
 
-To run first do
-- `chmod +x ubuntu_setup_part*`
-then run
-- `./ubuntu_setup_part1.sh`
-and follow any prompts. Once it finishes (you should be in zsh at this point), run
-- `./ubuntu_setup_part2.sh`
+#### Some things to keep in mind
+ubuntu_setup_part1.sh **_MUST_** be run **before** ubuntu_setup_part2.sh, I mean they are suffixed with the part number for a reason.
 
-TIP: Remember that tab completion is your friend in bash
+At the end of part1 your shell will switch to zsh, don't be alarmed, that is supposed to happen. It doesn't look as pretty at this point but I promise after part2 and the restart, it will look great (and if you don't like the theme you could change it to your own preferences). If zsh isn't your thing (and with unsetopt no_match it should really behave almost exactly like bash, just look cooler) you could always change back to bash by editing /etc/passwd as root and changing `/bin/zsh` by your name to `/bin/bash` instead (or use chsh, your choice really, the my option is great for if you really screw it all up and end up without a working shell to issue chsh from).
+
+**TIP:** _Remember that tab completion is your friend in bash_
 
 
 Current Known Issues:
