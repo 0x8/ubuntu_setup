@@ -9,7 +9,7 @@
 ##########################################
 ##update repositories and upgrade software
 echo ">>Update and Upgrade system..."
-sudo apt-get update -qfy;
+sudo apt-get update;
 sudo apt-get upgrade -qfy;
 sudo apt-get dist-upgrade -qfy;
 echo "done"
@@ -17,7 +17,7 @@ echo "done"
 #######################
 ##apt-get installations
 echo ">>Installing new software..."
-sudo apt-get install -qfy gcc-multilib g++-multilib thefuck wget curl zsh python python3 vim-runtime vim-gui-common
+sudo apt-get install -fy open-vm-tools-* gcc-multilib g++-multilib thefuck wget curl zsh python python3 vim-runtime vim-gui-common
 echo "done"
 
 ###################

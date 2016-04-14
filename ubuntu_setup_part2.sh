@@ -40,3 +40,8 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 fc-cache -fv ~/.fonts/
 echo ">>Font Installation done, for now you will need to manually change theme in .zshrc to agnoster"
 echo "done"
+
+############################
+##System Restart
+echo ">>Script done. RESTARTING NOW..."
+sudo shutdown -r 0;
