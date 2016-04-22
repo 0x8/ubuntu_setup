@@ -30,9 +30,9 @@ echo "eval \$(thefuck --alias)" >> ~/.zshrc
 echo "done"
 
 echo ">>Adding alias file to bashrc"
-echo "   [if [ -f ~/.aliases]:" >> .bashrc
-echo "        . ~/.aliases" >> .bashrc
-echo "   fi" >> .bashrc
+echo "[if [ -f ~/.aliases]; then" >> .bashrc
+echo "    . ~/.aliases" >> .bashrc
+echo "fi" >> .bashrc
 echo "done"
 
 #############################
