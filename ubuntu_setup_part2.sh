@@ -49,6 +49,22 @@ mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 fc-cache -fv ~/.fonts/
 echo "done"
 
+################################
+##Set up git directories for self
+
+#This is just for me, feel free to change it if you'd like
+#these repos are all public though some will be useless to you i'd imagine
+if [ $USER == nullp0inter ]; then
+	mkdir ~/Documents/Github
+	cd ~/Documents/Github
+	git clone https://github.com/0x8/ubuntu_setup.git
+	git clone https://github.com/0x8/CTFs.git
+	git clone https://github.com/0x8/buffer_overflows.git
+	git clone https://github.com/0x8/ROPstuff.git
+	cd
+	echo "alias github='cd ~/Documents/Github'" >> ~/.aliases
+fi
+
 ############################
 ##System Restart
 echo ">>Script done. RESTARTING NOW..."
