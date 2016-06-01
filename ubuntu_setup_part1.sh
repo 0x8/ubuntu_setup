@@ -68,37 +68,37 @@ echo "[INSTALLING] vim-runtime"
 echo "[INSTALLING] vim-runtime" >> ~/ubuntu_setup.log
 sudo apt-get -qq install -fy vim-runtime        1> /dev/null
 echo "done"
-echo "done"
+echo "done" >> ~/ubuntu_setup.log
 echo "[INSTALLING] vim-gui-common"
 echo "[INSTALLING] vim-gui-common" >> ~/ubuntu_setup.log
 sudo apt-get -qq install -fy vim-gui-common     1> /dev/null
 echo "done"
-echo "done"
+echo "done" >> ~/ubuntu_setup.log
 echo "[INSTALLING] python2.7"
 echo "[INSTALLING] python2.7" >> ~/ubuntu_setup.log
 sudo apt-get -qq install -fy python2.7          1> /dev/null
 echo "done"
-echo "done"
+echo "done" >> ~/ubuntu_setup.log
 echo "[INSTALLING] python2.7-dev"
 echo "[INSTALLING] python2.7-dev" >> ~/ubuntu_setup.log
 sudo apt-get -qq install -fy python2.7-dev      1> /dev/null
 echo "done"
-echo "done"
+echo "done" >> ~/ubuntu_setup.log
 echo "[INSTALLING] python-pip"
 echo "[INSTALLING] python-pip" >> ~/ubuntu_setup.log
 sudo apt-get -qq install -fy python-pip         1> /dev/null
 echo "done"
-echo "done"
+echo "done" >> ubuntu_setup.log
 echo "[INSTALLING] quassel-client"
 echo "[INSTALLING] quassel-client" >> ~/ubuntu_setup.log
 sudo apt-get -qq install -fy quassel-client     1> /dev/null
 echo "done"
-echo "done"
+echo "done" >> ~/ubuntu_setup.log
 echo "[INSTALLING] texlive-full"
 echo "[INSTALLING] texlive-full" >> ~/ubuntu_setup.log
 sudo apt-get -qq install -fy texlive-full        1> /dev/null
 echo "done"
-echo "done"
+echo "done" >> ~/ubuntu_setup.log
 echo "[INSTALLING] cinnamon"
 echo "[INSTALLING] cinnamon" >> ~/ubuntu_setup.log
 sudo apt-get -qq install -fy cinnamon           1> /dev/null
@@ -123,7 +123,7 @@ echo "done" >> ~/ubuntu_setup.log
 
 #################
 ##Radare2 Install
-echo ">>Git Cloning radare2..." >>
+echo ">>Git Cloning radare2..."
 echo ">>Git CLoning radare2..." >> ~/ubuntu_setup.log
 cd ~
 git clone https://github.com/radare/radare2.git
