@@ -8,10 +8,12 @@ touch ~/ubuntu_setup.log
 
 ##########################################
 ##update repositories and upgrade software
+echo ">>Update and Upgrade system..."
 echo ">>Update and Upgrade system..." >> ~/ubuntu_setup.log
 sudo apt-get -qq update 1> /dev/null;
 sudo apt-get -qq upgrade -qfy 1> /dev/null;
 sudo apt-get -qq dist-upgrade -qfy 1> /dev/null;
+echo "done"
 echo "done" >> ~/ubuntu_setup.log
 
 #######################
