@@ -129,9 +129,8 @@ cd ~
 git clone https://github.com/radare/radare2.git
 echo "done"
 echo "done" >> ~/ubuntu_setup.log
-
 echo ">>Installing radare2..." >> ~/ubuntu_setup.log
-./sys/install.sh
+~/radare2/sys/install.sh
 if [ -f '/usr/bin/radare2' ]
     then
         echo "[SUCCESS] Installed radare2"
