@@ -27,7 +27,7 @@ Because you have to grab this from the git repo, naturally you must first instal
 sudo apt-get install git
 git clone https://github.com/0x8/ubuntu_setup.git
 cd ubuntu_setup
-chmod +x ubuntu_setup_part*
+chmod u+x ubuntu_setup_part*
 ./ubuntu_setup_part1.sh
 ./ubuntu_setup_part2.sh
 ```
