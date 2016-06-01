@@ -156,9 +156,21 @@ echo "done" >> ~/ubuntu_setup.log
 echo ">>Installing scudcloud"
 echo ">>Installing scudcloud" >> ~/ubuntu_setup.log
 sudo apt-add-repository -y ppa:rael-gc/scudcloud 1> /dev/null
+echo "Running debconf stuff for scudcloud"
+echo "Runnong debconf stuff for scudcloud" >> ~/ubuntu_setup.log
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections 1> /dev/null
-sudo apt-get update 1> /dev/null
-sudo apt-get install scudcloud 1> /dev/null
+echo "done"
+echo "done" >> ~/ubuntu_setup.log
+echo "[UPDATING] Running apt-get update"
+echo "[UPDATING] Running apt-get update" >> ~/ubuntu_setup.log
+sudo apt-get update
+echo "done"
+echo "done" >> ~/ubuntu_setup.log
+echo "[INSTALLING] Running apt-get install scudcloud"
+echo "[INSTALLING] Running apt-get install scudcloud" >> ~/ubuntu_setup.log
+sudo apt-get install scudcloud
+echo "done"
+echo "done" >> ~/ubuntu_setup.log
 if [ -f '/usr/bin/scudcloud' ]
     then
         echo "[SUCCESS] Installed scudcloud"
@@ -201,6 +213,7 @@ echo "done" >> ~/ubuntu_setup.log
 ##.vimrc Setup and Configuration
 echo ">>Settomg up ~/.vimrc"
 echo ">>Setting up ~/.vimrc" >> ~/ubuntu_setup.log
+cd ~/ubuntu_setup
 if [ -f ~/.vimrc ]
     then
         mv ~/.vimrc ~/.vimrc.old
