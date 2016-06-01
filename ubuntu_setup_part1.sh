@@ -21,7 +21,6 @@ sudo apt-get -qq install -fy open-vm-tools-*    1> /dev/null
 echo "[INSTALLING] gcc-multilib"
 sudo apt-get -qq install -fy gcc-multilib       1> /dev/null
 echo "[INSTALLING] g++-multilib"
-echo "[INSTALLING] g++-multilib" >> ~/ubuntu_setup.log
 sudo apt-get -qq install -fy g++-multilib       1> /dev/null
 echo "[INSTALLING] thefuck"
 sudo apt-get -qq install -fy thefuck            1> /dev/null
@@ -47,8 +46,8 @@ echo "[INSTALLING] python-pip"
 sudo apt-get -qq install -fy python-pip         1> /dev/null
 echo "[INSTALLING] quassel-client"
 sudo apt-get -qq install -fy quassel-client     1> /dev/null
-echo "[INSTALLING] texlive-full"
-sudo apt-get -qq install -fy texlive-full        1> /dev/null
+echo "[INSTALLING] texlive"
+sudo apt-get -qq install -fy texlive-           1> /dev/null
 echo "[INSTALLING] cinnamon"
 sudo apt-get -qq install -fy cinnamon           1> /dev/null
 echo "done"
