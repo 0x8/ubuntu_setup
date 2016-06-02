@@ -8,8 +8,11 @@
 ##########################################
 ##update repositories and upgrade software
 echo ">>Update and Upgrade system..."
+echo "[RUNNING] apt-get update"
 sudo apt-get -qq update 1> /dev/null;
+echo "[RUNNING] apt-get upgrade"
 sudo apt-get -qq upgrade -qfy 1> /dev/null;
+echo "[RUNNING] apt-get dist-upgrade"
 sudo apt-get -qq dist-upgrade -qfy 1> /dev/null;
 echo "done"
 
@@ -30,6 +33,8 @@ echo "[INSTALLING] curl"
 sudo apt-get -qq install -fy curl               1> /dev/null
 echo "[INSTALLING] zsh"
 sudo apt-get -qq install -fy zsh                1> /dev/null
+echo "[INSTALLING] tmux"                        
+sudo apt-get -qq install -fy tmux               1> /dev/null   
 echo "[INSTALLING] python"
 sudo apt-get -qq install -fy python             1> /dev/null
 echo "[INSTALLING] python3"
@@ -61,7 +66,7 @@ echo "done"
 #################################
 ##Attempt pip install of pwntools
 echo ">>PIP>>Installing pwntools..."
-sudo -H pip install pwntools 1> /dev/null
+sudo -H pip install pwntools 2> /dev/null
 echo "done"
 
 #################
@@ -97,7 +102,7 @@ echo "[UPDATING] Running apt-get update"
 sudo apt-get update
 echo "done"
 echo "[INSTALLING] Running apt-get install scudcloud"
-sudo apt-get install scudcloud
+sudo apt-get -qq install -fy scudcloud
 echo "done"
 if [ -f '/usr/bin/scudcloud' ]
     then

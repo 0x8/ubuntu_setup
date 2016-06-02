@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 ############################################
 #Nullp0inter's ubuntu configuration part two
@@ -10,7 +10,7 @@ echo "done"
 echo "unsetopt no_match" >> ~/.zshrc
 echo ">>Changing theme to agnoster"
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' ~/.zshrc
-sed -i 's/$USER%m/$USER/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
+sed -i 's/$USER@%m/$USER/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
 sed -i 's/%~/%c/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
 echo "done"
 
