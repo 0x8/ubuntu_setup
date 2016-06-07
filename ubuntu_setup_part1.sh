@@ -9,11 +9,11 @@
 ##update repositories and upgrade software
 echo ">>Update and Upgrade system..."
 echo "[RUNNING] apt-get update"
-sudo apt-get -qq update 1> /dev/null;
+sudo apt-get update;
 echo "[RUNNING] apt-get upgrade"
-sudo apt-get -qq upgrade -qfy 1> /dev/null;
+sudo apt-get upgrade -qfy;
 echo "[RUNNING] apt-get dist-upgrade"
-sudo apt-get -qq dist-upgrade -qfy 1> /dev/null;
+sudo apt-get dist-upgrade -qfy;
 echo "done"
 
 #######################
