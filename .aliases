@@ -1,0 +1,19 @@
+##UTILITY
+#alias ll='ls -la'
+alias q='exit'
+alias ropg='ROPgadget'
+
+##Directories
+alias github='cd ~/Documents/Github'
+alias writeups='cd ~/Documents/Github/writeups'
+alias uuu='sudo apt-get update && sudo apt-get upgrade -fy && sudo apt-get dist-upgrade -fy'
+alias la='ls -la'
+
+##Random testing
+alias testcmd='echo $1'
+alias evince='evince $@ &'
+
+#Android
+alias adb='/home/nullp0inter/Android/Sdk/platform-tools/adb'
+alias and_objdump='/home/nullp0inter/Documents/Github/android/android-ndk-r13/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/arm-linux-androideabi/bin/objdump'
+alias avd='/home/nullp0inter/Android/Sdk/tools/android avd'
