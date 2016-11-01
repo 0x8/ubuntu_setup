@@ -1,51 +1,66 @@
-" nullp0inter
-" Creation: May 31, 2016
-" Last Edit: May 31, 2016 10:10 PM
-" .vimrc file
-" configured for code
-" configured for vim-latex
-" for use in https://github.com/0x8/ubuntu_setup
-" alter at your own risk. I have included comments.
-" I am by no means an expert here, so Google will provide
-"     far better answers than I can.
-
+"""""" .vimrc file """""
+" Use vim settings
+" PUT THIS FIRST
 set nocompatible
-filetype plugin on                              " Required for vim-latex
+filetype plugin on
 
-" Vim-LaTeX stuff
+" Stuff for vimLatex
 set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"                      " Set tex_flavor to LaTeX
-let g:Tex_DefaultTargetFormat="pdf"             " Compile in pdfLaTeX
-let g:Tex_MultipleCompileFormats="pdf"          " Compile in pdfLaTeX
+let g:tex_flavor = "latex"
+let g:Tex_DefaultTargetFormat="pdf"
+let g:Tex_MultipleCompileFormats="pdf"
 
-" Enable syntax-highlighting
-syntax enable                                   " Enable syntax highlighting
+" enable syntax highlighting
+syntax enable
 
-" Folding
-set foldmethod=syntax                           " Enable folding
+" enable folding (wrapping text)
+"set foldmethod=syntax
 
-" Indent options
-set shiftwidth=4                                " Set number of spaces for auto-indent
-set tabstop=4                                   " Tab is 4 spaces
-set autoindent                                  " Enable auto-indenting
-set cindent                                     " Indentation for C like files
-set copyindent                                  " Copy indentation on auto-indent
-set smarttab                                    " Insert tabs according to shiftwidth not tabstop
-set expandtab                                   " Expand tabs into spaces. Delete leading " to enable
-set shiftround                                  " Use multiples of shiftwidth when using '>' and '<'
+" For arduino syntax!
+autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
-" Extra options
-set number                                      " Enable line numbers
-set showmatch                                   " Show matching parenthesis
-set history=1000                                " Enable a bigger history
-set undolevels=1000                             " More levels of undo
-set title                                       " Change terminal's title
-set ls=2                                        " Show file name at bottom
-set pastetoggle=<F2>                            " Press F2 in insert to enter paste mode which
-                                                "    allows multi-line pasting
+" For Pathogen
+execute pathogen#infect()
 
-" Searching
-set ignorecase                                  " Ignore case when searching for all lowercase
-set smartcase                                   " ...Except when search includes caps
-set hlsearch                                    " Highlight search terms
-set incsearch                                   " Show matches as you type
+" hide buffers without having to write on undo changes first
+set hidden
+
+set wrap                        " do wrap lines
+set backspace=indent,eol,start
+                                " allow backspacing over everything in insert mode
+" indenting options
+set shiftwidth=4                " number of spaces to use for autoindenting
+set tabstop=4                   " a tab is four spaces
+set autoindent                  " always set autoindenting on
+set cindent                     " indents for C like files
+set copyindent                  " copy the previous indentation on autoindenting
+set smarttab                    " insert tabs on the start of a line according to
+                                "    shiftwidth, not tabstop
+set expandtab                   " Expand tabs into spaces
+set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
+
+set number                      " always show line numbers
+set showmatch                   " set show matching parenthesis
+set ignorecase                  " ignore case when searching
+set smartcase                   " ignore case if search pattern is all lowercase,
+                                "    case-sensitive otherwise
+set scrolloff=4                 " keep 4 lines off the edges of the screen when scrolling
+" set virtualedit=all             " allow the cursor to go in to "invalid" places
+
+set hlsearch                    " highlight search terms
+set incsearch                   " show search matches as you type
+
+set pastetoggle=<F2>            " when in insert mode, press <F2> to go to
+                                "    paste mode, where you can paste mass data
+                                "    that won't be autoindented
+"set mouse=a                     " enable using the mouse if terminal emulator
+                                "    supports it (xterm does and urxvt)
+set fileformats="unix,dos,mac"
+set formatoptions+=1            " When wrapping paragraphs, don't end lines
+
+
+set history=1000                " remember more commands and search history
+set undolevels=1000             " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title                       " change the terminal's title
+set ls=2                         "Show filename at bottom
