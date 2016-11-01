@@ -27,7 +27,6 @@ Because you have to grab this from the git repo, naturally you must first instal
 sudo apt-get install git
 git clone https://github.com/0x8/ubuntu_setup.git
 cd ubuntu_setup
-chmod u+x ubuntu_setup_part*
 ./ubuntu_setup_part1.sh
 ./ubuntu_setup_part2.sh
 ```
@@ -49,6 +48,8 @@ Current Known Issues:
     - Whether this is due to graphics support issues in server, I'm unsure
 - Script does not automatically change theme to agnoster
     - I believe fixing this requires some fancy sed stuff which I know nothing about at the moment so bear with me on this one. I'll try to fix it eventually.
-- Does not include the following: ~~pwntools~~, capstone, ropgadget
+- Does not include the following: ~~pwntools~~, ~~capstone~~, ropgadget
     - For some reason pip is a royal bastard when it comes to trying to install these and every single one of them fails. Requests on the other hand is fine
     - **FIXED pwntools** it was related to a dependency issue due to 16.04 using python3. Script now installs some python2.7 stuff so pwntools will work. Remember to head pwntools scripts with `#!/usr/bin/env python2` instead of `#!/usr/bin/env python` because as I stated above, 16.04 uses python3 in which pwntools won't work.
+    - **FIXED capstone** I believe capstones failures were due to a dependency I had accidentally left out, that should now be fixed.
+    - **>Possible ROPGadget fix** I am not 100% sure if it was fixed, but ROPGadget possibly will install now. I have yet to test this but all of the dependencies should now be added at the very least.
