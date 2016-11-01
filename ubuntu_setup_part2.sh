@@ -27,25 +27,33 @@ if [ -f '~/.aliases' ]
         echo "[!!WARNING!!] double-check the new aliases for    "
         echo "[!!WARNING!!] duplicates, etc."
 fi
-touch ~/.aliases;
-echo "##UTILITY" >> ~/.aliases;
-echo "alias ll='ls -la'" >> ~/.aliases;
-echo "alias q='exit'" >> ~/.aliases;
-echo "alias ropg='ROPgadget'" >> ~/.aliases;
-echo "" >> ~/.aliases;
-echo "##Directories" >> ~/.aliases;
-echo "done"
 
-echo ">>Editing .zshrc to use new alias file AND to use thefuck"
-echo "source \$HOME/.aliases" >> ~/.zshrc
-echo "eval \$(thefuck --alias)" >> ~/.zshrc
-echo "done"
+if [ ! -f './.aliases' ]
+    then    
+        touch ~/.aliases;
+        echo "##UTILITY" >> ~/.aliases;
+        echo "alias ll='ls -la'" >> ~/.aliases;
+        echo "alias q='exit'" >> ~/.aliases;
+        echo "alias ropg='ROPgadget'" >> ~/.aliases;
+        echo "" >> ~/.aliases;
+        echo "##Directories" >> ~/.aliases;
+        echo "done"
 
-echo ">>Adding alias file to bashrc"
-echo "[if [ -f ~/.aliases]; then" >> .bashrc
-echo "    . ~/.aliases" >> .bashrc
-echo "fi" >> .bashrc
-echo "done"
+        echo ">>Editing .zshrc to use new alias file AND to use thefuck"
+        echo "source \$HOME/.aliases" >> ~/.zshrc
+        echo "eval \$(thefuck --alias)" >> ~/.zshrc
+        echo "done"
+
+        echo ">>Adding alias file to bashrc"
+        echo "[if [ -f ~/.aliases]; then" >> .bashrc
+        echo "    . ~/.aliases" >> .bashrc
+        echo "fi" >> .bashrc
+        echo "done"
+fi
+if [ -f './.aliases' ]
+    then
+        mv './.aliases' ~
+fi
 
 #################
 ##Powerline fonts
@@ -65,13 +73,17 @@ echo "done"
 #these repos are all public though some will be useless to you i'd imagine
 if [ $USER == nullp0inter ]; then
 	mkdir ~/Documents/Github
-	cd ~/Documents/Github
-	git clone https://github.com/0x8/ubuntu_setup.git
-	git clone https://github.com/0x8/CTFs.git
-	git clone https://github.com/0x8/buffer_overflows.git
-	git clone https://github.com/0x8/ROPstuff.git
-	cd
-	echo "alias github='cd ~/Documents/Github'" >> ~/.aliases
+fi
+
+##################
+##zshrc and bashrc
+if [ -f './.bashrc' ]
+    then
+        mv './.bashrc' ~
+fi
+if [ -f './.zshrc' ]
+    then 
+        mv './.zshrc' ~
 fi
 
 ################
