@@ -25,8 +25,6 @@ echo "[INSTALLING] gcc-multilib"
 sudo apt-get -qq install -fy gcc-multilib       1> /dev/null
 echo "[INSTALLING] g++-multilib"
 sudo apt-get -qq install -fy g++-multilib       1> /dev/null
-echo "[INSTALLING] thefuck"
-sudo apt-get -qq install -fy thefuck            1> /dev/null
 echo "[INSTALLING] wget"
 sudo apt-get -qq install -fy wget               1> /dev/null
 echo "[INSTALLING] curl"
@@ -52,21 +50,37 @@ sudo apt-get -qq install -fy python-pip         1> /dev/null
 echo "[INSTALLING] quassel-client"
 sudo apt-get -qq install -fy quassel-client     1> /dev/null
 echo "[INSTALLING] texlive"
-sudo apt-get -qq install -fy texlive-           1> /dev/null
-echo "[INSTALLING] cinnamon"
-sudo apt-get -qq install -fy cinnamon           1> /dev/null
+sudo apt-get -qq install -fy texlive            1> /dev/null
+echo "[INSTALLING] gnome"
+sudo apt-get -qq install -fy gnome              1> /dev/null
+echo "[INSTALLING] python-dev"
+sudo apt-get -qq install -fy python-dev         1> /dev/null
+echo "[INSTALLING] libssl-dev"
+sudo apt-get -qq install -fy libssl-dev         1> /dev/null
+echo "[INSTALLING] libffi-dev"
+sudo apt-get -qq install -fy libffi-dev         1> /dev/null
+echo "[INSTALLING] build-essential"
+sudo apt-get -qq install -fy build-essential    1> /dev/null
+echo "[INSTALLING] virtualenvwrapper"
+sudo apt-get -qq install -fy virtualenvwrapper  1> /dev/null
+echo "[INSTALLING] libqt4-dev"
+sudo apt-get -qq install -fy libqt4-dev         1> /dev/null
+echo "[INSTALLING] graphviz-dev"
+sudo apt-get -qq install -fy graphviz-dev       1> /dev/null
+echo "[INSTALLING] terminator"
+sudo apt-get -qq install -fy terminator         1> /dev/null
 echo "done"
 
 ########################################
 ##Attempt pip install of python-requests
 echo ">>PIP>>Installing python requests..."
-sudo pip install requests 1> /dev/null
+sudo pip install --upgrade requests 1> /dev/null
 echo "done"
 
 #################################
 ##Attempt pip install of pwntools
 echo ">>PIP>>Installing pwntools..."
-sudo -H pip install pwntools 2> /dev/null
+sudo -H pip install --upgrade pwntools 2> /dev/null
 echo "done"
 
 #################
@@ -92,30 +106,9 @@ git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
 echo "done"
 
-#########################################
-##Install Scud-Cloud, ubuntu slack client
-echo ">>Installing scudcloud"
-sudo apt-add-repository -y ppa:rael-gc/scudcloud 1> /dev/null
-echo "Running debconf stuff for scudcloud"
-echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections 1> /dev/null
-echo "[UPDATING] Running apt-get update"
-sudo apt-get update
-echo "done"
-echo "[INSTALLING] Running apt-get install scudcloud"
-sudo apt-get -qq install -fy scudcloud
-echo "done"
-if [ -f '/usr/bin/scudcloud' ]
-    then
-        echo "[SUCCESS] Installed scudcloud"
-    else
-        echo "[!!FAIL!!] Problem installing scudcloud"
-fi
-echo "done"
-
 #########################
 ##LaTeX download (vim-latex)
 echo ">>Downloading and setting up vim-latex..."
-echo ">>Downloading and setting up vim-latex..." >> ~/ubuntu_setup.log
 mkdir ~/tmp
 cd ~/tmp
 wget 'http://downloads.sourceforge.net/project/vim-latex/snapshots/vim-latex-1.8.23-20141116.812-gitd0f31c9.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fvim-latex%2Ffiles%2F&ts=1464727158&use_mirror=netcologne'
@@ -138,7 +131,7 @@ echo "done"
 
 ################################
 ##.vimrc Setup and Configuration
-echo ">>Settomg up ~/.vimrc"
+echo ">>Setting up ~/.vimrc"
 cd ~/ubuntu_setup
 if [ -f ~/.vimrc ]
     then
