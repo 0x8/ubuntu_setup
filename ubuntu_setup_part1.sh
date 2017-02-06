@@ -51,8 +51,8 @@ echo "[INSTALLING] quassel-client"
 sudo apt-get -qq install -fy quassel-client     1> /dev/null
 #echo "[INSTALLING] texlive"
 #sudo apt-get -qq install -fy texlive            1> /dev/null
-echo "[INSTALLING] gnome"
-sudo apt-get -qq install -fy gnome              1> /dev/null
+#echo "[INSTALLING] gnome"
+#sudo apt-get -qq install -fy gnome              1> /dev/null
 echo "[INSTALLING] python-dev"
 sudo apt-get -qq install -fy python-dev         1> /dev/null
 echo "[INSTALLING] libssl-dev"
