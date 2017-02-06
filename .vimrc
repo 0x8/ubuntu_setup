@@ -6,9 +6,9 @@ filetype plugin on
 
 " Stuff for vimLatex
 set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
-let g:Tex_DefaultTargetFormat="pdf"
-let g:Tex_MultipleCompileFormats="pdf"
+"let g:tex_flavor = "latex"
+"let g:Tex_DefaultTargetFormat="pdf"
+"let g:Tex_MultipleCompileFormats="pdf"
 
 " enable syntax highlighting
 syntax enable
@@ -20,7 +20,7 @@ syntax enable
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
 " For Pathogen
-execute pathogen#infect()
+"execute pathogen#infect() " To uncomment, remove the leading double quote
 
 " hide buffers without having to write on undo changes first
 set hidden
