@@ -49,8 +49,8 @@ echo "[INSTALLING] python-pip"
 sudo apt-get -qq install -fy python-pip         1> /dev/null
 echo "[INSTALLING] quassel-client"
 sudo apt-get -qq install -fy quassel-client     1> /dev/null
-echo "[INSTALLING] texlive"
-sudo apt-get -qq install -fy texlive            1> /dev/null
+#echo "[INSTALLING] texlive"
+#sudo apt-get -qq install -fy texlive            1> /dev/null
 echo "[INSTALLING] gnome"
 sudo apt-get -qq install -fy gnome              1> /dev/null
 echo "[INSTALLING] python-dev"
@@ -74,7 +74,7 @@ echo "done"
 ########################################
 ##Attempt pip install of python-requests
 echo ">>PIP>>Installing python requests..."
-sudo pip install --upgrade requests 1> /dev/null
+sudo -H pip install --upgrade requests 1> /dev/null
 echo "done"
 
 #################################
@@ -136,10 +136,10 @@ cd ~/ubuntu_setup
 if [ -f ~/.vimrc ]
     then
         mv ~/.vimrc ~/.vimrc.old
-        mv ./.vimrc ~
+        mv ./.vimrc ~/
         echo "done"
     else
-        mv ./.vimrc ~
+        mv ./.vimrc ~/
         echo "done"
 fi
 
